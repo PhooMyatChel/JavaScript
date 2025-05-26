@@ -7,27 +7,17 @@
   <body>
     <h1>Javascript Scope and Closures Example</h1>
     <script>
-      /*
-          ✅ Scope:
-          Local Scope: Variables declared inside a function are only accessible inside that function.
-
-          Global Scope: Variables declared outside functions are accessible anywhere.
-      */
+     
       let globalVar = "I'm global";
 
       function testScope() {
         let localVar = "I'm local";
-        console.log(globalVar); // Accessible
-        console.log(localVar); // Accessible
+        console.log(globalVar); 
+        console.log(localVar); 
       }
 
       testScope();
-      // console.log(localVar); // ❌ Error: localVar is not defined
-
-      /*
-          ✅ Closures:
-          A closure is a function that "remembers" its outer scope, even after the outer function has finished running.
-      */
+     
       function outer() {
         let count = 0;
         return function inner() {
@@ -37,9 +27,9 @@
       }
 
       const counter = outer();
-      counter(); // Count: 1
-      counter(); // Count: 2
-      //inner() still has access to count even though outer() has finished executing.
+      counter();
+      counter();
+   
     </script>
   </body>
 </html>
