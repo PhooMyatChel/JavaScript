@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Class's override Example</title>
+  </head>
+  <body>
+    <h1>JS Class's override Example</h1>
+    <script>
+      class Animal {
+        speak() {
+          console.log("Animal speaks");
+        }
+      }
+
+      class Dog extends Animal {
+        
+        speak() {
+          console.log("Dog barks");
+        }
+      }
+
+      const d = new Dog();
+      d.speak();
+    </script>
+  </body>
+</html>
