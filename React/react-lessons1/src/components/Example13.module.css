@@ -1,0 +1,14 @@
+.header{
+    color:red;
+
+}
+.name{
+    color:blue;
+    padding:10;
+    font-size: 20px;
+}
+.userName{
+    height: 50px;
+    border:"1px solid black";
+    border-radius:5px;
+}

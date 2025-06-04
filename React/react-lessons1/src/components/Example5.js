@@ -4,7 +4,7 @@ export default  class Person extends React.Component{
     constructor (props){
         super(props);
         this.state={
-            name:"Mg Kyaw MIn",
+            name:"Mg Kyaw Min",
             email:"mkm@gmail.com",
             phoneNo:"091234567",
         };
@@ -29,8 +29,7 @@ export default  class Person extends React.Component{
                 <input
                 value={this.state.value}
                 placeholder="Enter Name"
-                onChange={(event)=>{
-                    this.setState({name:event.target.value})
+                onChange={(event)=>{this.setState({name:event.target.value})
                 }}
                 />
                 <input
