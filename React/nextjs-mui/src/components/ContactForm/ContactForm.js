@@ -10,9 +10,10 @@ import {
   Button,
   FormHelperText,
 } from "@mui/material";
+import React from 'react'
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
-import { contactSchema } from "./Validation";
+import { schema} from "./Validation";
 
 // Example Cities and Townships
 const CITIES = [
@@ -35,7 +36,7 @@ export default function ContactForm() {
     control,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(contactSchema),
+    resolver: yupResolver(schema),
     defaultValues: {
       name: "",
       email: "",
@@ -48,6 +49,7 @@ export default function ContactForm() {
 
   const onSubmit = (formData) => {
     console.log("Form Data:", formData);//log the form data
+    console.log("Name Input Data",formData.name);
     reset();//reset the form data
   };
 
@@ -99,8 +101,8 @@ export default function ContactForm() {
               label="City"
               value={field.value || ""}
             >
-              {CITIES.map((city) => (
-                <MenuItem key={city.value} value={city.value}>
+              {CITIES.map((city,index) => (
+                <MenuItem key={index} value={city.value}>
                   {city.label}
                 </MenuItem>
               ))}
@@ -123,8 +125,8 @@ export default function ContactForm() {
               label="Township"
               value={field.value || ""}
             >
-              {TOWNSHIPS.map((township) => (
-                <MenuItem key={township.value} value={township.value}>
+              {TOWNSHIPS.map((township,index) => (
+                <MenuItem key={index} value={township.value}>
                   {township.label}
                 </MenuItem>
               ))}
