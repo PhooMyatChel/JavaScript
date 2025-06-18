@@ -26,7 +26,7 @@ export default function Home() {
         </Box>
         </NavLayout> */}
         {/* <BasicForm/> */}
-        <ContactForm/>
+         <ContactForm/> 
     </div>
   );
 }
